@@ -1,0 +1,141 @@
+@model List<BookRadar.Models.HistorialBusqueda>
+@{
+    ViewData["Title"] = "Historial de búsquedas";
+}
+
+<div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+    <div>
+        <h4 class="mb-0">
+            <i class="bi bi-clock-history text-primary me-2"></i>Historial de búsquedas
+        </h4>
+        <p class="text-muted mb-0 mt-1">@Model.Count registro(s) en total</p>
+    </div>
+    <div class="d-flex gap-2 flex-wrap">
+        <a asp-controller="Books" asp-action="ExportCsv" class="btn btn-outline-success btn-sm">
+            <i class="bi bi-download me-1"></i>Exportar CSV
+        </a>
+        <form method="post" asp-action="ClearHistory" asp-controller="Books"
+              onsubmit="return confirm('¿Seguro que deseas limpiar todo el historial?')" class="d-inline">
+            <button type="submit" class="btn btn-outline-danger btn-sm">
+                <i class="bi bi-trash me-1"></i>Limpiar historial
+            </button>
+        </form>
+        <a asp-controller="Books" asp-action="Index" class="btn btn-primary btn-sm">
+            <i class="bi bi-search me-1"></i>Nueva búsqueda
+        </a>
+    </div>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info d-flex align-items-center">
+        <i class="bi bi-info-circle-fill me-2"></i>
+        No hay búsquedas registradas aún. ¡Realiza tu primera búsqueda!
+    </div>
+}
+else
+{
+    <div class="card border-0 shadow-sm">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0" id="tablaHistorial">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="ps-4">Autor</th>
+                        <th>Título guardado</th>
+                        <th>Año</th>
+                        <th>Editorial</th>
+                        <th>Fecha de consulta</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyHistorial">
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="ps-4">
+                                <span class="badge bg-primary bg-opacity-10 text-primary fw-semibold">
+                                    @item.Autor
+                                </span>
+                            </td>
+                            <td class="fw-semibold">@item.Titulo</td>
+                            <td>
+                                @if (item.AnioPublicacion.HasValue)
+                                {
+                                    <span class="badge bg-secondary">@item.AnioPublicacion</span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">—</span>
+                                }
+                            </td>
+                            <td>@(item.Editorial ?? "—")</td>
+                            <td class="text-muted">
+                                <i class="bi bi-calendar3 me-1"></i>
+                                @item.FechaConsulta.ToString("dd/MM/yyyy HH:mm")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Paginación -->
+        <div class="card-footer bg-white border-0 d-flex align-items-center justify-content-between py-3 px-4">
+            <small class="text-muted" id="paginaInfo"></small>
+            <nav>
+                <ul class="pagination pagination-sm mb-0" id="paginacion"></ul>
+            </nav>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        const FILAS_POR_PAGINA = 10;
+        let paginaActual = 1;
+
+        const filas = Array.from(document.querySelectorAll('#tbodyHistorial tr'));
+        const totalPaginas = Math.ceil(filas.length / FILAS_POR_PAGINA);
+
+        function renderPagina(pagina) {
+            paginaActual = pagina;
+            const inicio = (pagina - 1) * FILAS_POR_PAGINA;
+            const fin = inicio + FILAS_POR_PAGINA;
+
+            filas.forEach((f, i) => {
+                f.style.display = (i >= inicio && i < fin) ? '' : 'none';
+            });
+
+            document.getElementById('paginaInfo').textContent =
+                `Mostrando ${Math.min(fin, filas.length)} de ${filas.length} registros`;
+
+            renderControles();
+        }
+
+        function renderControles() {
+            const nav = document.getElementById('paginacion');
+            nav.innerHTML = '';
+
+            const crearLi = (texto, pagina, deshabilitado = false, activo = false) => {
+                const li = document.createElement('li');
+                li.className = `page-item ${deshabilitado ? 'disabled' : ''} ${activo ? 'active' : ''}`;
+                const a = document.createElement('a');
+                a.className = 'page-link';
+                a.href = '#';
+                a.innerHTML = texto;
+                if (!deshabilitado && !activo) {
+                    a.addEventListener('click', e => { e.preventDefault(); renderPagina(pagina); });
+                }
+                li.appendChild(a);
+                return li;
+            };
+
+            nav.appendChild(crearLi('&laquo;', paginaActual - 1, paginaActual === 1));
+            for (let i = 1; i <= totalPaginas; i++) {
+                nav.appendChild(crearLi(i, i, false, i === paginaActual));
+            }
+            nav.appendChild(crearLi('&raquo;', paginaActual + 1, paginaActual === totalPaginas));
+        }
+
+        if (filas.length > 0) renderPagina(1);
+    </script>
+}

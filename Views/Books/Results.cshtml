@@ -1,0 +1,254 @@
+@model BookRadar.Models.BusquedaResultadoViewModel
+@{
+    ViewData["Title"] = "Resultados — " + Model.Autor;
+
+    var aniosDisponibles = Model.Libros
+        .Where(l => l.AnioPublicacion.HasValue)
+        .Select(l => l.AnioPublicacion!.Value)
+        .Distinct()
+        .OrderBy(a => a)
+        .ToList();
+
+    int anioMin = aniosDisponibles.Any() ? aniosDisponibles.First() : 1900;
+    int anioMax = aniosDisponibles.Any() ? aniosDisponibles.Last() : DateTime.Now.Year;
+}
+
+<style>
+    .range-wrap { position: relative; padding: 0 4px; }
+    .range-track { position: relative; height: 6px; background: #dee2e6; border-radius: 3px; margin: 10px 0; }
+    .range-fill  { position: absolute; height: 100%; background: #0d6efd; border-radius: 3px; }
+    input[type=range] {
+        position: absolute; width: 100%; height: 6px;
+        top: 0; left: 0; appearance: none; background: transparent;
+        pointer-events: none; margin: 0;
+    }
+    input[type=range]::-webkit-slider-thumb {
+        appearance: none; width: 18px; height: 18px;
+        background: #0d6efd; border-radius: 50%;
+        border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.25);
+        pointer-events: all; cursor: pointer;
+    }
+    input[type=range]::-moz-range-thumb {
+        width: 18px; height: 18px;
+        background: #0d6efd; border-radius: 50%;
+        border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.25);
+        pointer-events: all; cursor: pointer;
+    }
+    .year-label { font-size: .8rem; font-weight: 600; color: #0d6efd; min-width: 40px; text-align: center; }
+    .sortable:hover { background-color: #2c3034; cursor: pointer; }
+</style>
+
+<div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+    <div>
+        <h4 class="mb-0">
+            <i class="bi bi-journal-text text-primary me-2"></i>Resultados para:
+            <span class="text-primary">@Model.Autor</span>
+        </h4>
+        <p class="text-muted mb-0 mt-1">
+            <span id="visibleCount">@Model.Libros.Count</span> de @Model.Libros.Count libro(s) encontrado(s)
+        </p>
+    </div>
+    <div class="d-flex gap-2">
+        <a asp-controller="Books" asp-action="Index" class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-search me-1"></i>Nueva búsqueda
+        </a>
+        <a asp-controller="Books" asp-action="History" class="btn btn-outline-primary btn-sm">
+            <i class="bi bi-clock-history me-1"></i>Ver historial
+        </a>
+    </div>
+</div>
+
+@if (!Model.Libros.Any())
+{
+    <div class="alert alert-warning d-flex align-items-center">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+        No se encontraron libros para este autor. Intenta con otro nombre.
+    </div>
+}
+else
+{
+    <!-- Filtro por rango de año -->
+    <div class="card border-0 shadow-sm mb-3">
+        <div class="card-body py-3 px-4">
+            <div class="row align-items-center g-3">
+                <div class="col-auto">
+                    <span class="fw-semibold small">Filtrar por año</span>
+                </div>
+                <div class="col-auto">
+                    <span class="year-label" id="labelDesde">@anioMin</span>
+                </div>
+                <div class="col" style="min-width:200px">
+                    <div class="range-wrap">
+                        <div class="range-track">
+                            <div class="range-fill" id="rangeFill"></div>
+                            <input type="range" id="sliderDesde" min="@anioMin" max="@anioMax" value="@anioMin" step="1" />
+                            <input type="range" id="sliderHasta" min="@anioMin" max="@anioMax" value="@anioMax" step="1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <span class="year-label" id="labelHasta">@anioMax</span>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-sm btn-primary" onclick="aplicarFiltro()">
+                        <i class="bi bi-funnel me-1"></i>Filtrar
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary ms-1" onclick="limpiarFiltro()">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <div class="col-auto ms-auto d-none d-md-block">
+                    <small class="text-muted">Haz clic en los encabezados para ordenar</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0" id="tablaResultados">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="ps-4" style="width:50px">#</th>
+                        <th class="sortable" data-col="1">
+                            Título <i class="bi bi-chevron-expand ms-1 text-muted small"></i>
+                        </th>
+                        <th class="sortable" data-col="2">
+                            Año <i class="bi bi-chevron-expand ms-1 text-muted small"></i>
+                        </th>
+                        <th class="sortable" data-col="3">
+                            Editorial <i class="bi bi-chevron-expand ms-1 text-muted small"></i>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyResultados">
+                    @for (int i = 0; i < Model.Libros.Count; i++)
+                    {
+                        var libro = Model.Libros[i];
+                        <tr data-anio="@(libro.AnioPublicacion?.ToString() ?? "0")">
+                            <td class="ps-4 text-muted">@(i + 1)</td>
+                            <td class="fw-semibold">@libro.Titulo</td>
+                            <td>
+                                @if (libro.AnioPublicacion.HasValue)
+                                {
+                                    <span class="badge bg-secondary">@libro.AnioPublicacion</span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">—</span>
+                                }
+                            </td>
+                            <td>@(libro.Editorial ?? "—")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div id="sinResultados" class="text-center py-4 text-muted" style="display:none">
+            <i class="bi bi-search fs-3 d-block mb-2"></i>
+            Ningún libro coincide con el filtro de año aplicado.
+        </div>
+    </div>
+}
+
+@section Scripts {
+<script>
+    const ANIO_MIN = @anioMin;
+    const ANIO_MAX = @anioMax;
+
+    const sliderDesde = document.getElementById('sliderDesde');
+    const sliderHasta = document.getElementById('sliderHasta');
+    const labelDesde  = document.getElementById('labelDesde');
+    const labelHasta  = document.getElementById('labelHasta');
+    const fill        = document.getElementById('rangeFill');
+
+    function actualizarFill() {
+        const min = ANIO_MIN;
+        const max = ANIO_MAX;
+        const rango = max - min || 1;
+        const desde = parseInt(sliderDesde.value);
+        const hasta = parseInt(sliderHasta.value);
+        const left  = ((desde - min) / rango) * 100;
+        const right = ((hasta - min) / rango) * 100;
+        fill.style.left  = left  + '%';
+        fill.style.width = (right - left) + '%';
+        labelDesde.textContent = desde;
+        labelHasta.textContent = hasta;
+    }
+
+    sliderDesde.addEventListener('input', function () {
+        if (parseInt(this.value) > parseInt(sliderHasta.value)) {
+            sliderHasta.value = this.value;
+        }
+        actualizarFill();
+    });
+
+    sliderHasta.addEventListener('input', function () {
+        if (parseInt(this.value) < parseInt(sliderDesde.value)) {
+            sliderDesde.value = this.value;
+        }
+        actualizarFill();
+    });
+
+    actualizarFill();
+
+    //Funciones de filtrado
+    function aplicarFiltro() {
+        const desde = parseInt(sliderDesde.value);
+        const hasta = parseInt(sliderHasta.value);
+        const filas = document.querySelectorAll('#tbodyResultados tr');
+        let visibles = 0;
+
+        filas.forEach(fila => {
+            const anio = parseInt(fila.dataset.anio) || 0;
+            const mostrar = anio === 0 || (anio >= desde && anio <= hasta);
+            fila.style.display = mostrar ? '' : 'none';
+            if (mostrar) visibles++;
+        });
+
+        document.getElementById('visibleCount').textContent = visibles;
+        document.getElementById('sinResultados').style.display = visibles === 0 ? 'block' : 'none';
+    }
+
+    function limpiarFiltro() {
+        sliderDesde.value = ANIO_MIN;
+        sliderHasta.value = ANIO_MAX;
+        actualizarFill();
+        document.querySelectorAll('#tbodyResultados tr').forEach(f => f.style.display = '');
+        document.getElementById('visibleCount').textContent =
+            document.querySelectorAll('#tbodyResultados tr').length;
+        document.getElementById('sinResultados').style.display = 'none';
+    }
+
+    //Ordentamiento de columnas
+    let sortDir = {};
+
+    document.querySelectorAll('.sortable').forEach(th => {
+        th.addEventListener('click', function () {
+            const col = parseInt(this.dataset.col);
+            sortDir[col] = !sortDir[col];
+            const asc = sortDir[col];
+
+            const tbody = document.getElementById('tbodyResultados');
+            const filas = Array.from(tbody.querySelectorAll('tr'));
+
+            filas.sort((a, b) => {
+                const aVal = a.cells[col]?.textContent.trim() ?? '';
+                const bVal = b.cells[col]?.textContent.trim() ?? '';
+                const aNum = parseFloat(aVal);
+                const bNum = parseFloat(bVal);
+                if (!isNaN(aNum) && !isNaN(bNum)) return asc ? aNum - bNum : bNum - aNum;
+                return asc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+            });
+
+            filas.forEach(f => tbody.appendChild(f));
+
+            document.querySelectorAll('.sortable i').forEach(i => {
+                i.className = 'bi bi-chevron-expand ms-1 text-muted small';
+            });
+            this.querySelector('i').className =
+                `bi ${asc ? 'bi-chevron-up' : 'bi-chevron-down'} ms-1 small`;
+        });
+    });
+</script>
+}

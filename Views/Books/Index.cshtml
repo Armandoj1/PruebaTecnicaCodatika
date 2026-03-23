@@ -1,0 +1,109 @@
+@model BookRadar.Models.BusquedaResultadoViewModel
+@{
+    ViewData["Title"] = "Buscar libros";
+}
+
+<style>
+    .skeleton { background: linear-gradient(90deg, #e9ecef 25%, #f8f9fa 50%, #e9ecef 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: 4px; }
+    @@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    .skeleton-row td div { height: 18px; margin: 4px 0; }
+</style>
+
+<div class="row justify-content-center mt-4" id="formSection">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <h4 class="card-title mb-1">
+                    <i class="bi bi-search text-primary me-2"></i>Buscar libros
+                </h4>
+                <p class="text-muted mb-4">Ingresa el nombre de un autor para ver sus publicaciones.</p>
+
+                <form method="post" asp-action="Search" asp-controller="Books" id="searchForm">
+                    <div class="mb-3">
+                        <label asp-for="Autor" class="form-label fw-semibold">Nombre del autor</label>
+                        <input asp-for="Autor"
+                               class="form-control form-control-lg"
+                               placeholder="Ej: Gabriel Garcia Marquez"
+                               autocomplete="off"
+                               maxlength="100" />
+                        <div class="d-flex justify-content-between align-items-start mt-1">
+                            <span asp-validation-for="Autor" class="text-danger small"></span>
+                            <small class="text-muted ms-auto" id="charCount">0 / 100</small>
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg" id="btnBuscar">
+                            <i class="bi bi-search me-2"></i>Buscar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a asp-controller="Books" asp-action="History" class="text-muted text-decoration-none">
+                <i class="bi bi-clock-history me-1"></i>Ver historial de búsquedas
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Skeleton loader -->
+<div class="row justify-content-center mt-4" id="skeletonSection" style="display:none">
+    <div class="col-md-10">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <div class="skeleton mb-3" style="height:22px;width:240px"></div>
+                <div class="skeleton mb-4" style="height:14px;width:160px"></div>
+                <table class="table mb-0">
+                    <thead>
+                        <tr>
+                            <th><div class="skeleton" style="height:14px;width:20px"></div></th>
+                            <th><div class="skeleton" style="height:14px;width:120px"></div></th>
+                            <th><div class="skeleton" style="height:14px;width:60px"></div></th>
+                            <th><div class="skeleton" style="height:14px;width:100px"></div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < 6; i++)
+                        {
+                            <tr class="skeleton-row">
+                                <td><div class="skeleton"></div></td>
+                                <td><div class="skeleton"></div></td>
+                                <td><div class="skeleton" style="width:50px"></div></td>
+                                <td><div class="skeleton" style="width:110px"></div></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        const input = document.getElementById('Autor');
+        const charCount = document.getElementById('charCount');
+        const btnBuscar = document.getElementById('btnBuscar');
+        const formSection = document.getElementById('formSection');
+        const skeletonSection = document.getElementById('skeletonSection');
+        const form = document.getElementById('searchForm');
+
+        if (input) {
+            input.addEventListener('input', function () {
+                charCount.textContent = `${this.value.length} / 100`;
+            });
+            charCount.textContent = `${input.value.length} / 100`;
+        }
+
+        form.addEventListener('submit', function (e) {
+            if (!input || input.value.trim() === '') return;
+            btnBuscar.disabled = true;
+            btnBuscar.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Buscando...';
+            formSection.style.display = 'none';
+            skeletonSection.style.display = 'flex';
+        });
+    </script>
+}

@@ -1,0 +1,408 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\services\\openlibraryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:services\\openlibraryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\services\\historialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:services\\historialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\views\\books\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:views\\books\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\views\\books\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:views\\books\\results.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\models\\libroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:models\\libroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\services\\iopenlibraryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:services\\iopenlibraryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\services\\ihistorialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:services\\ihistorialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\models\\openlibrarymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:models\\openlibrarymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\models\\historialbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:models\\historialbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|c:\\users\\josearmando\\documents\\prueba\\bookradarproyecto\\bookradar\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0ED5FE51-B374-12D5-ECCB-D975B21DF30D}|BookRadar.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 26,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:42:04.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-23T05:42:01.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-23T05:42:00.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-23T05:41:58.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-23T05:41:57.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IOpenLibraryService.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Services\\IOpenLibraryService.cs",
+              "RelativeDocumentMoniker": "Services\\IOpenLibraryService.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Services\\IOpenLibraryService.cs",
+              "RelativeToolTip": "Services\\IOpenLibraryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:41:45.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OpenLibraryModels.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Models\\OpenLibraryModels.cs",
+              "RelativeDocumentMoniker": "Models\\OpenLibraryModels.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Models\\OpenLibraryModels.cs",
+              "RelativeToolTip": "Models\\OpenLibraryModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:41:42.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HistorialBusqueda.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Models\\HistorialBusqueda.cs",
+              "RelativeDocumentMoniker": "Models\\HistorialBusqueda.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Models\\HistorialBusqueda.cs",
+              "RelativeToolTip": "Models\\HistorialBusqueda.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:41:40.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LibroViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Models\\LibroViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\LibroViewModel.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Models\\LibroViewModel.cs",
+              "RelativeToolTip": "Models\\LibroViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:41:38.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:41:37.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IHistorialService.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Services\\IHistorialService.cs",
+              "RelativeDocumentMoniker": "Services\\IHistorialService.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Services\\IHistorialService.cs",
+              "RelativeToolTip": "Services\\IHistorialService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:23:38.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Results.cshtml",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Books\\Results.cshtml",
+              "RelativeDocumentMoniker": "Views\\Books\\Results.cshtml",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Books\\Results.cshtml",
+              "RelativeToolTip": "Views\\Books\\Results.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwMIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-23T05:19:13.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Books\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Books\\Index.cshtml",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Books\\Index.cshtml",
+              "RelativeToolTip": "Views\\Books\\Index.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-23T05:19:05.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAADYAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-23T05:18:52.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HistorialService.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Services\\HistorialService.cs",
+              "RelativeDocumentMoniker": "Services\\HistorialService.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Services\\HistorialService.cs",
+              "RelativeToolTip": "Services\\HistorialService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwDMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:16:35.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OpenLibraryService.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Services\\OpenLibraryService.cs",
+              "RelativeDocumentMoniker": "Services\\OpenLibraryService.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Services\\OpenLibraryService.cs",
+              "RelativeToolTip": "Services\\OpenLibraryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:14:33.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-23T05:13:38.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "History.cshtml",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Books\\History.cshtml",
+              "RelativeDocumentMoniker": "Views\\Books\\History.cshtml",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Views\\Books\\History.cshtml",
+              "RelativeToolTip": "Views\\Books\\History.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-23T05:10:25.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:10:18.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:10:15.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Users\\JoseArmando\\Documents\\Prueba\\BookRadarProyecto\\BookRadar\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "Controllers\\BooksController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T05:10:07.561Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
